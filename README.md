@@ -36,11 +36,11 @@ import rehypeStringify from 'rehype-stringify'
 import { read } from 'to-vfile'
 
 const file = await remark()
-  .use(remarkRehype)
-  .use(rehypeSlug)
-  .use(rehypeNavigation)
-  .use(rehypeStringify)
-  .process(await read('example.md'))
+   .use(remarkRehype)
+   .use(rehypeSlug)
+   .use(rehypeNavigation, { wrapperTag: 'nav' })
+   .use(rehypeStringify)
+   .process(await read('example.md'))
 
 console.log(file.value)
 ```
@@ -57,7 +57,8 @@ then running `node example.js` yields:
 <p>text</p>
 <nav>
    <ul>
-      <li><a href="#level-11">Level 1.1</a>
+      <li>
+         <a href="#level-11">Level 1.1</a>
          <ul>
             <li><a href="#level-21">Level 2.1</a></li>
             <li><a href="#level-22">Level 2.2</a></li>
@@ -80,7 +81,7 @@ unified().use(rehypeNavigation, options)
 
 The follwoing options are available:
 
-- `extract` (`Boolean`, optional) — Whether to render navigation only and remove everything else. Deafult is `false`.
+-  `extract` (`Boolean`, optional) — Whether to render navigation only and remove everything else. Deafult is `false`.
 
 [rehype]: https://github.com/rehypejs/rehype
 [build-badge]: https://github.com/thomd/rehype-navigation/workflows/plugin-test/badge.svg
