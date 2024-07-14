@@ -1,5 +1,5 @@
-import { h } from 'hastscript'
 import { selectAll } from 'hast-util-select'
+import { h } from 'hastscript'
 
 const rehypeNavigation = (opts) => {
    const defaultOptions = {
@@ -15,9 +15,9 @@ const rehypeNavigation = (opts) => {
       headings.forEach((heading) => {
          const id = heading.properties.id
          const text = heading.children[0].value
-         const level = parseInt(heading.tagName.substring(1), 10)
-         const item = { id, text, level, children: [] }
-         while (stack.length && stack[stack.length - 1].level >= level) {
+         const depth = heading.tagName[1]
+         const item = { id, text, depth, children: [] }
+         while (stack.length && stack[stack.length - 1].depth >= depth) {
             stack.pop()
          }
          if (stack.length) {
