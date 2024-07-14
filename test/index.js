@@ -46,7 +46,13 @@ test('fixtures', async function (t) {
          let input = String(fs.readFileSync(inputFile))
          let output = String(fs.readFileSync(outputFile))
          try {
-            const file = await remark().use(remarkRehype).use(rehypeSlug).use(rehypeNavigation, config).use(rehypeFormat, { indent: '\t' }).use(rehypeStringify).process(input)
+            const file = await remark()
+               .use(remarkRehype)
+               .use(fixture.startsWith('_') ? null : rehypeSlug)
+               .use(rehypeNavigation, config)
+               .use(rehypeFormat, { indent: '\t' })
+               .use(rehypeStringify)
+               .process(input)
             assert.equal(String(file), output)
          } catch (error) {
             throw error
