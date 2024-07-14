@@ -4,7 +4,7 @@
 
 `rehype-navigation` is a [rehype][rehype] plugin to create a navigation with anchor links reflecting the headline hierarchy.
 
-The plugin works best in combination with [rehype-slug][rehype-slug].
+The plugin works best in combination with a plugin which adds `id` attributes to headings, lime for example [rehype-slug][rehype-slug]. If headings have no `id` attribute, then the navigation is generated without anchor links.
 
 ## Demo
 

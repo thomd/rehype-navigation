@@ -52,7 +52,7 @@ function buildNavTree(tag, items) {
 
 function buildNavItem(item) {
    return h('li', [
-      h('a', { href: `#${item.id}` }, item.text),
+      item.id ? h('a', { href: `#${item.id}` }, item.text) : item.text,
       item.children.length > 0
          ? h(
               'ul',
