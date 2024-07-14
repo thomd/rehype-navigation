@@ -6,6 +6,17 @@
 
 The plugin works best in combination with [rehype-slug][rehype-slug].
 
+## Demo
+
+This demo demonstrates an implementation of the navigation
+
+```
+cd dem
+node demo.js > index.html
+npx http-server
+open http://localhost:8080
+```
+
 ## Usage
 
 Say we have the following file `example.md`:
