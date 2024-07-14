@@ -21,6 +21,8 @@ text
 text
 
 # Level 1.2
+
+text
 ```
 
 and a module `example.js`:
@@ -47,7 +49,6 @@ then running `node example.js` yields:
 
 ```html
 <h1 id="level-11">Level 1.1</h1>
-<p>text</p>
 <h2 id="level-21">Level 2.1</h2>
 <p>text</p>
 <h2 id="level-22">Level 2.2</h2>
