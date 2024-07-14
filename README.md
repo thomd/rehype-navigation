@@ -8,7 +8,7 @@ The plugin works best in combination with [rehype-slug][rehype-slug].
 
 ## Demo
 
-Run the following for a [demo](https://thomd.github.io/rehype-navigation/) implementation:
+Generate the HTML for a demo page like this:
 
 ```
 cd demo
@@ -16,6 +16,8 @@ node demo.js > index.html
 npx http-server
 open http://localhost:8080
 ```
+
+or open this [demo page](https://thomd.github.io/rehype-navigation/).
 
 ## Usage
 
@@ -50,7 +52,7 @@ import { read } from 'to-vfile'
 const file = await remark()
    .use(remarkRehype)
    .use(rehypeSlug)
-   .use(rehypeNavigation, { wrapperTag: 'nav' })
+   .use(rehypeNavigation, { wrapperTag: 'nav', maxDepth: 3 })
    .use(rehypeStringify)
    .process(await read('example.md'))
 
