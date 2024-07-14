@@ -5,10 +5,12 @@ const rehypeNavigation = (opts) => {
    const defaultOptions = {
       extract: false,
       wrapperTag: null,
+      maxDepth: 6,
    }
    const options = { ...defaultOptions, ...opts }
    return (tree) => {
-      const headings = selectAll('h1, h2, h3, h4, h5, h6', tree)
+      const hTags = Array.from({ length: options.maxDepth }, (_, i) => `h${1 + i}`).join(', ')
+      const headings = selectAll(hTags, tree)
       const navItems = []
       const stack = []
 
