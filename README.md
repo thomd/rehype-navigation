@@ -8,10 +8,10 @@ The plugin works best in combination with [rehype-slug][rehype-slug].
 
 ## Demo
 
-This demo demonstrates an implementation of the navigation
+Run the following for a [demo](https://thomd.github.io/rehype-navigation/) implementation:
 
 ```
-cd dem
+cd demo
 node demo.js > index.html
 npx http-server
 open http://localhost:8080
