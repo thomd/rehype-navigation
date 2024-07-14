@@ -2,8 +2,9 @@
 
 ![Build][build-badge]
 
-`rehype-navigation` is a [rehype][rehype] plugin to create a navigation reflecting the headline hierarchy. THe plugin works best in combination with
-`rehype-slug`.
+`rehype-navigation` is a [rehype][rehype] plugin to create a navigation reflecting the headline hierarchy.
+
+The plugin works best in combination with [rehype-slug][rehype-slug].
 
 ## Usage
 
@@ -81,7 +82,10 @@ unified().use(rehypeNavigation, options)
 
 The follwoing options are available:
 
--  `extract` (`Boolean`, optional) — Whether to render navigation only and remove everything else. Deafult is `false`.
+-  `extract` (`Boolean`, optional) — Whether to render only the navigation and remove everything else. Default is `false`.
+
+-  `wrapperTag` (`String`, optional) — Tag to wrap the navigation. Default is no wrapper tag.
 
 [rehype]: https://github.com/rehypejs/rehype
+[rehype-slug]: https://github.com/rehypejs/rehype-slug
 [build-badge]: https://github.com/thomd/rehype-navigation/workflows/plugin-test/badge.svg
