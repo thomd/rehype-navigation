@@ -2,7 +2,7 @@
 
 ![Build][build-badge]
 
-`rehype-navigation` is a [rehype][rehype] plugin to create a navigation reflecting the headline hierarchy.
+`rehype-navigation` is a [rehype][rehype] plugin to create a navigation with anchor links reflecting the headline hierarchy.
 
 The plugin works best in combination with [rehype-slug][rehype-slug].
 
@@ -95,9 +95,9 @@ unified().use(rehypeNavigation, options)
 
 The follwoing options are available:
 
--  `extract` (`Boolean`, optional) — Whether to render only the navigation and remove everything else. Default is `false`.
+-  `extract` (`Boolean`, optional) — Generate only the navigation and remove everything else. Default is `false`.
 
--  `maxDepth` (`Boolean`, optional) — Maximum depth of the headings hierarchy which should be taken into account for the navigation. Default is `6`.
+-  `maxDepth` (`Integer`, optional) — Maximum depth of the headings hierarchy which should be taken into account for the navigation. Default is `6`.
 
 -  `wrapperTag` (`String`, optional) — Tag to wrap the navigation. Default is no wrapper tag.
 
