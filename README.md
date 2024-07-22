@@ -101,6 +101,8 @@ The follwoing options are available:
 
 -  `wrapperTag` (`String`, optional) — Tag to wrap the navigation. Default is no wrapper tag.
 
+-  `fullMonty` (`Boolean`, optional) — Generate navigation even if there is only **one** headline. Default is `true`.
+
 [rehype]: https://github.com/rehypejs/rehype
 [rehype-slug]: https://github.com/rehypejs/rehype-slug
 [build-badge]: https://github.com/thomd/rehype-navigation/workflows/plugin-test/badge.svg

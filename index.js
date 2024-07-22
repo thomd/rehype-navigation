@@ -6,6 +6,7 @@ const rehypeNavigation = (opts) => {
       extract: false,
       wrapperTag: null,
       maxDepth: 6,
+      fullMonty: true,
    }
    const options = { ...defaultOptions, ...opts }
    return (tree) => {
@@ -34,7 +35,10 @@ const rehypeNavigation = (opts) => {
       if (options.extract) {
          tree.children = []
       }
-      tree.children.push(navTree)
+      const oneNavItem = navItems.length === 1 && navItems[0].children.length === 0
+      if (!oneNavItem || options.fullMonty) {
+         tree.children.push(navTree)
+      }
    }
 }
 
