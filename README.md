@@ -93,7 +93,7 @@ unified().use(rehypeNavigation, options)
 
 ### Options
 
-The follwoing options are available:
+The following options are available:
 
 -  `extract` (`Boolean`, optional) — Generate only the navigation and remove everything else. Default is `false`.
 
