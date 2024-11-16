@@ -1,6 +1,6 @@
 {
-   "name": "rehype-navigation",
-   "version": "0.1.0",
+   "name": "@thomd/rehype-navigation",
+   "version": "1.0.0",
    "description": "rehype-plugin to create a navigation reflecting the headline hierarchy",
    "keywords": [
       "rehype-plugin",
